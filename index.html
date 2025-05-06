@@ -10,40 +10,36 @@
   
   <!-- Configuración de Tailwind -->
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            primary: '#2563EB',
-            secondary: '#60A5FA',
-            neutral: '#F3F4F6',
-            accent: '#6366F1',
-            soft: '#E0E7FF',
-            text: '#1F2937',
-          },
-          animation: {
-            fadeIn: 'fadeIn 1s ease-in-out both',
-            slideUp: 'slideUp 0.8s ease-out both',
-            pulseHeader: 'pulseHeader 6s ease-in-out infinite'
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
-            slideUp: {
-              '0%': { opacity: 0, transform: 'translateY(30px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
-            },
-            pulseHeader: {
-              '0%, 100%': { backgroundColor: '#6B21A8' },
-              '50%': { backgroundColor: '#4C1D95' },
-            }
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          primary: '#1E40AF',  // Azul más oscuro y profesional
+          secondary: '#3B82F6', // Azul medio
+          neutral: '#F9FAFB',   // Gris muy claro para fondo
+          accent: '#4F46E5',    // Índigo para acentos
+          soft: '#EFF6FF',      // Azul muy claro para fondos secundarios
+          text: '#111827',      // Gris casi negro para texto
+          dark: '#1F2937',      // Gris oscuro para contrastes
+        },
+        animation: {
+          fadeIn: 'fadeIn 1s ease-in-out both',
+          slideUp: 'slideUp 0.8s ease-out both',
+        },
+        keyframes: {
+          fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+          slideUp: {
+            '0%': { opacity: 0, transform: 'translateY(30px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' },
           },
         },
       },
-    };
-  </script>
+    },
+  };
+</script>
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -59,7 +55,7 @@
 <body class="bg-neutral text-gray-800 font-sans scroll-smooth">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 bg-primary text-white shadow z-50 animate-pulseHeader">
+  <header class="fixed top-0 left-0 right-0 bg-primary text-white shadow z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <img src="mi-foto.png" alt="Luis Adrián" class="w-10 h-10 rounded-full border-2 border-white" />
@@ -76,7 +72,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="pt-24 bg-gradient-to-r from-purple-900 to-indigo-900 text-white text-center">
+  <section class="pt-24 bg-gradient-to-r from-primary to-dark text-white text-center">
     <div class="max-w-3xl mx-auto px-6 py-20 animate-slideUp">
       <h2 class="text-4xl font-bold mb-4">¡Hola! Soy Luis Adrián</h2>
       <p class="text-lg mb-6">Desarrollador web apasionado por la tecnología, diseño y experiencias digitales.</p>
@@ -151,7 +147,7 @@
   </section>
 
   <!-- Habilidades -->
-  <section id="skills" class="bg-accent text-white py-16">
+  <section id="skills" class="bg-dark text-white py-16">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-2xl font-bold mb-6">Habilidades</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
