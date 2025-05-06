@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luis Adrián Abarca Gómez | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
           colors: {
             primary: '#6B21A8',
             secondary: '#FDE68A',
@@ -42,23 +46,23 @@
 
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 bg-primary text-white shadow z-50 animate-pulseHeader">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
       <div class="flex items-center gap-3">
         <img src="mi-foto.png" alt="Luis Adrián" class="w-10 h-10 rounded-full border-2 border-white" />
         <h1 class="text-xl font-bold">Luis Adrián Abarca Gómez</h1>
       </div>
-      <nav class="space-x-4">
-        <a href="#sobre" class="hover:underline">Sobre mí</a>
-        <a href="#experiencia" class="hover:underline">Experiencia</a>
-        <a href="#educacion" class="hover:underline">Educación</a>
-        <a href="#skills" class="hover:underline">Habilidades</a>
-        <a href="#contacto" class="hover:underline">Contacto</a>
+      <nav class="w-full sm:w-auto mt-2 sm:mt-0 space-y-2 sm:space-y-0 sm:space-x-4 text-sm sm:text-base text-center">
+        <a href="#sobre" class="block sm:inline hover:underline">Sobre mí</a>
+        <a href="#experiencia" class="block sm:inline hover:underline">Experiencia</a>
+        <a href="#educacion" class="block sm:inline hover:underline">Educación</a>
+        <a href="#skills" class="block sm:inline hover:underline">Habilidades</a>
+        <a href="#contacto" class="block sm:inline hover:underline">Contacto</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="pt-24 bg-gradient-to-r from-purple-900 to-indigo-900 text-white text-center">
+  <section class="pt-24 bg-gradient-to-r from-purple-900 to-indigo-900 text-white text-center transition-all duration-700">
     <div class="max-w-3xl mx-auto px-6 py-20 animate-slideUp">
       <h2 class="text-4xl font-bold mb-4">¡Hola! Soy Luis Adrián</h2>
       <p class="text-lg mb-6">Desarrollador web apasionado por la tecnología, diseño y experiencias digitales.</p>
@@ -160,9 +164,8 @@
   <script>
     lucide.createIcons();
   </script>
-
 </body>
-</html>
+</html
 
 
 
