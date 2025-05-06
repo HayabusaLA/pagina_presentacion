@@ -3,28 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi sitio personal</title>
+  <title>Luis Adrián Abarca Gómez | Portafolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out both',
+            slideUp: 'slideUp 0.8s ease-out both',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(30px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <div class="min-h-screen flex items-center justify-center px-4">
-    <div class="max-w-xl w-full bg-white shadow-xl rounded-xl p-8 text-center">
-      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Foto de perfil" class="w-32 h-32 mx-auto rounded-full border-4 border-blue-500 mb-4" />
-      <h1 class="text-3xl font-bold mb-2">¡Hola! Soy Luis Gomez</h1>
-      <p class="text-gray-600 mb-6">Desarrollador web | Apasionado por la tecnología y el diseño</p>
+<body class="bg-gray-100 text-gray-800 font-sans scroll-smooth">
 
-      <div class="flex justify-center space-x-4 mb-6">
-        <a href="CV_Profesional.pdf" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Ver mi CV</a>
-        <a href="mailto:luis604@outlook.com" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition">Contacto</a>
-      </div>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow z-50 animate-fadeIn">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">Luis Adrián Abarca Gómez</h1>
+      <nav class="space-x-4">
+        <a href="#sobre" class="text-gray-700 hover:text-blue-600">Sobre mí</a>
+        <a href="#skills" class="text-gray-700 hover:text-blue-600">Habilidades</a>
+        <a href="#contacto" class="text-gray-700 hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="space-y-2">
-        <a href="https://www.linkedin.com/in/luis-adri%C3%A1n-abarca-g%C3%B3mez-337222287" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
-        <a href="https://github.com/HayabusaLA" target="_blank" class="text-gray-800 hover:underline">GitHub</a>
-        <!-- Agrega más enlaces si quieres -->
+  <!-- Hero -->
+  <section class="pt-24 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center">
+    <div class="max-w-3xl mx-auto px-6 py-20 animate-slideUp">
+      <h2 class="text-4xl font-bold mb-4">¡Hola! Soy Luis Adrián</h2>
+      <p class="text-lg mb-6">Desarrollador web apasionado por la tecnología, diseño y experiencias digitales.</p>
+      <a href="#contacto" class="bg-white text-blue-600 px-6 py-2 rounded shadow hover:bg-gray-200 transition">Contáctame</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre" class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-blue-600 mb-4">Sobre mí</h2>
+    <p class="text-gray-700 leading-relaxed animate-fadeIn">
+      Soy Luis Adrián Abarca Gómez, desarrollador web con experiencia en la creación de interfaces modernas y accesibles.
+      Me encanta aprender nuevas tecnologías y transformar ideas en productos funcionales.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-white py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-blue-600 mb-6">Habilidades</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center animate-slideUp">
+        <div class="bg-blue-50 p-4 rounded shadow">HTML / CSS</div>
+        <div class="bg-blue-50 p-4 rounded shadow">JavaScript</div>
+        <div class="bg-blue-50 p-4 rounded shadow">TailwindCSS</div>
+        <div class="bg-blue-50 p-4 rounded shadow">React</div>
+        <div class="bg-blue-50 p-4 rounded shadow">Git / GitHub</div>
+        <div class="bg-blue-50 p-4 rounded shadow">Figma / UI Design</div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-100 py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-blue-600 mb-4">Contáctame</h2>
+      <p class="mb-4">¿Te interesa colaborar o tienes alguna pregunta?</p>
+      <div class="space-x-4 mb-4">
+        <a href="mailto:luis604@outlook.com" class="inline-flex items-center gap-2 text-blue-600 hover:underline">
+          <i data-lucide="mail" class="w-5 h-5"></i> luis604@outlook.com
+        </a>
+        <a href="CV.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition">
+          <i data-lucide="file-text" class="w-5 h-5"></i> Ver CV
+        </a>
+      </div>
+      <div class="flex justify-center gap-6 mt-6">
+        <a href="https://www.linkedin.com/in/luis-adrián-abarca-gómez-337222287" target="_blank" class="text-blue-700 hover:underline inline-flex items-center gap-2">
+          <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+        </a>
+        <a href="https://github.com/HayabusaLA" target="_blank" class="text-gray-800 hover:underline inline-flex items-center gap-2">
+          <i data-lucide="github" class="w-5 h-5"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-gray-500 py-6">
+    © 2025 Luis Adrián Abarca Gómez. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
+
 
