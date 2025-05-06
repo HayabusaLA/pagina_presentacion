@@ -17,11 +17,11 @@
             sans: ['Inter', 'sans-serif'],
           },
           colors: {
-            primary: '#2563EB',
-            secondary: '#60A5FA',
-            neutral: '#F1F5F9',
-            accent: '#0EA5E9',
-            soft: '#DBEAFE'
+            "primary": "#1E3A8A",  // Azul profundo para mayor presencia
+            "secondary": "#3B82F6", // Azul vibrante para generar contraste
+            "neutral": "#E5E7EB",  // Un gris claro más cálido que el blanco puro
+            "accent": "#EF4444",   // Rojo intenso para detalles llamativos (puedes cambiarlo por un color más suave si prefieres)
+            "soft": "#BFDBFE"     // Azul suave para fondos y elementos secundarios
           },
           animation: {
             fadeIn: 'fadeIn 1s ease-in-out both',
@@ -163,6 +163,43 @@
       </div>
     </div>
   </section>
+
+  <!-- Certificados y CV -->
+<section id="certificados" class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-primary mb-6">Certificados y CV</h2>
+
+    <!-- Certificados -->
+    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+      <!-- Tarjeta de certificado -->
+      <div class="bg-soft rounded-lg shadow-md overflow-hidden">
+        <div class="bg-cover bg-center h-40" style="background-image: url('certificado-ejemplo.png');"></div>
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary mb-2">Certificado de Desarrollo Web</h3>
+          <p class="text-gray-700 mb-3">Otorgado por Platzi en 2023.</p>
+          <a href="https://certificado-link.com" target="_blank" class="text-accent hover:underline">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- Puedes duplicar este bloque para más certificados -->
+      <div class="bg-soft rounded-lg shadow-md overflow-hidden">
+        <div class="bg-cover bg-center h-40" style="background-image: url('otro-certificado.png');"></div>
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-primary mb-2">Certificado de React</h3>
+          <p class="text-gray-700 mb-3">Otorgado por freeCodeCamp.</p>
+          <a href="https://certificado-link.com" target="_blank" class="text-accent hover:underline">Ver certificado</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para CV -->
+    <div class="text-center">
+      <a href="CV_Profesional.pdf" target="_blank" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">
+        Descargar CV
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Contacto -->
   <section id="contacto" class="bg-white py-16">
